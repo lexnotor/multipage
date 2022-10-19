@@ -1,0 +1,27 @@
+{
+  "name": "multipage",
+  "version": "1.0.0",
+  "description": "Simple multi page app",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexandre-notor/multipage.git"
+  },
+  "type": "module",
+  "keywords": [
+    "express",
+    "nodejs"
+  ],
+  "author": "Alexandre Chambu (lexnotor)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alexandre-notor/multipage/issues"
+  },
+  "homepage": "https://github.com/alexandre-notor/multipage#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
