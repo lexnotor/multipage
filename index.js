@@ -1,21 +1,22 @@
 import express from "express";
-import fs from 'fs';
 
 const app = express();
-const VIEW_PATH = './view';
+
+app.set('view engine', 'pug');
+app.set('views', 'views');
 
 app
     .get('/', (req, res) => {
-        fs.createReadStream(VIEW_PATH + '/index.html').pipe(res);
+        res.render('index')
     })
     .get('/about', (req, res) => {
-        fs.createReadStream(VIEW_PATH + '/about.html').pipe(res);
+        res.render('about')
     })
     .get('/test', (req, res) => {
-        fs.createReadStream(VIEW_PATH + '/test.html').pipe(res);
+        res.render('test');
     })
     .use((req, res) => {
-        fs.createReadStream(VIEW_PATH + '/index.html').pipe(res);
+        res.render('index');
     })
 
 
